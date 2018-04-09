@@ -25,15 +25,8 @@ def repeat(message,nbfois=nil)
 		
 end
 
-def start_of_word(nom="abcdefg",nb)
-
-		nombre = nb
-	
-	chars=""
-	nombre.times do |item|
-		chars +=nom[item]
-	end
-	return chars
+def start_of_word(nom,nb)
+		nom[0..nb-1]
 end
 
 def first_word(mot)
