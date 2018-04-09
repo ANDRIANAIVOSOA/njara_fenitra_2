@@ -1,55 +1,52 @@
 #write your code here
-def echo(message)
-	message
+def echo(word)
+	word
 end
 
-def shout(message)
-	message.upcase()
+def shout(word)
+	word.upcase!
 end
 
 
-def repeat(message,nbfois=nil)
-	nbMessge=""
-	if nbfois == nil
-		message+" "+message
+def repeat(word,time=nil)
+	wordMult = ""
+	if time == nil
+		word+" "+word
 	else
-		nbfois.times do |item|
-			if (nbfois-1 == item) 
-			 	nbMessge +="#{message}"
-			 else
-				nbMessge +="#{message} "
+		time.times do |item|
+			if (time == item)
+				wordMult += word
+			else
+				wordMult += " "+word
 			end
+			
 		end
-		return nbMessge
-	end
-		
-end
-
-def start_of_word(nom,nb)
-		nom[0..nb-1]
-end
-
-def first_word(mot)
-	mottableau=mot.split" "
-	mottableau.each do |valeur|
-		return mottableau[0]
+		wordMult[1..wordMult.length]
 	end
 end
+
+
+def start_of_word(word, nbr)
+	word[0..nbr-1]
+end
+
+
+def first_word(text)
+	firstWord=text.split(" ")
+	firstWord[0]
+end
+
 
 def titleize(text)
-	
-		textFinal = ""
-		mottableau = text.split" "
-		mottableau[0].capitalize!
-		
-		for i in 1..mottableau.length-1
-				if (mottableau[i] != "and" && mottableau[i] != "over" && mottableau[i] != "the" )
-					mottableau[i].capitalize!
-				end
+	words=text.split(" ")
+	words[0].capitalize!
+	textFinal=""
+	for i in 1..words.length-1
+		if (words[i] != "the") && (words[i] != "over") && (words[i] !="and")
+			words[i].capitalize!
 		end
-		
-		textFinal = mottableau.join" "
-		return textFinal
-
-	
+	end
+	textFinal=words.join" "
+	textFinal
 end
+

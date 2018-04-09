@@ -1,45 +1,44 @@
 #write your code here
-def add(nb1,nb2)
-	return nb1+nb2;
+def add (a,b)
+	a+b
 end
 
-def subtract(nb1,nb2)
-	return nb1-nb2
+def subtract (a,b)
+	a-b
 end
 
-def sum(nbTab)
-	somme=0
-	if nbTab==nil
-		return 0
-		
-	else
-		nbTab.each do |valeur|
-			somme +=valeur
+def sum (a)
+	if a!=nil
+		y=0
+		a.each do |x|
+			y+=x
 		end
-		return somme
-	end
-end
-
-def multiply(nbs)
-	multi=1;
-	nbs.each do |valeur|
-		multi *= valeur
-	end
-	return multi
-end
-
-def power(nb,puissance)
-	return nb**puissance
-end
-
-def factorial(nb)
-	fact=1
-	if(nb==0)
-		return 1
+	 y
 	else
-			for i in 1..nb 
-				fact *=i
-			end
-			return fact
+	 0 
+	end
+end
+
+
+def multiply(var)
+	y=1
+	var.each do |x|
+		y*=x
+	end
+	y
+end
+
+def power(a,b)
+	a**b
+end
+
+def factorial(x)
+	if x==0
+		1
+	else
+		for i in 1...x
+			x*=i
+		end
+		x
 	end
 end
